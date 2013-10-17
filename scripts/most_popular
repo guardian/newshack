@@ -1,0 +1,21 @@
+#! /usr/bin/env ruby
+
+require 'json'
+require 'open-uri'
+require 'date'
+require 'curb'
+require 'nokogiri'
+
+def request(url)
+	res  = Curl.get('http://api.sharedcount.com/?url=%s' % [url])
+	JSON.parse(res.body_str)
+end
+
+STDIN.read.split("\n").each {|url|
+    begin
+      shares = request(url)
+      puts [url, shares['Twitter'], shares['Facebook']['like_count'], shares['Facebook']['share_count']].join("\t")
+    rescue
+      puts "ERROR!! #{url}"
+    end
+}
