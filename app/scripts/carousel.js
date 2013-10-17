@@ -6,37 +6,95 @@ define(['grid-view'], function(GridView) {
         GridView,
         {
             xtype: 'image',
-            src: imagesPath + '1.jpg'
+            src: imagesPath + '1.jpg',
+            id: 'timestamp-0'
         },{
             xtype: 'image',
-            src: imagesPath + '2.jpg'
+            src: imagesPath + '2.jpg',
+            id: 'timestamp-8'
         },{
             xtype: 'image',
-            src: imagesPath + '3.jpg'
+            src: imagesPath + '3.jpg',
+            id: 'timestamp-13'
         },{
-            xtype: 'panel',
-            cls: 'card',
-            html: '<h1>Summary</h1>' +
-                  '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non aliquam lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque venenatis neque nunc, ut porttitor felis mollis a. Nulla at purus ut libero rutrum dapibus eget eget velit. Sed sollicitudin elit nec leo lobortis venenatis. Proin a lectus magna. Nam blandit nulla sem, porttitor accumsan lacus porta in. Pellentesque scelerisque ut leo eget condimentum. Nulla congue orci quis aliquet lacinia. Suspendisse luctus est vel dui egestas, eget aliquet lectus mollis.</p>'
+            xtype: 'image',
+            src: imagesPath + '4.jpg',
+            id: 'timestamp-16'
         },{
-            xtype: 'panel',
-            cls: 'card',
-            html: '<h1>Summary</h1>' +
-                  '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non aliquam lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque venenatis neque nunc, ut porttitor felis mollis a. Nulla at purus ut libero rutrum dapibus eget eget velit. Sed sollicitudin elit nec leo lobortis venenatis. Proin a lectus magna. Nam blandit nulla sem, porttitor accumsan lacus porta in. Pellentesque scelerisque ut leo eget condimentum. Nulla congue orci quis aliquet lacinia. Suspendisse luctus est vel dui egestas, eget aliquet lectus mollis.</p>'
+            xtype: 'image',
+            src: imagesPath + '5.jpg',
+            id: 'timestamp-21'
         },{
-            xtype: 'panel',
-            cls: 'card',
-            html: '<h1>Summary</h1>' +
-                  '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non aliquam lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque venenatis neque nunc, ut porttitor felis mollis a. Nulla at purus ut libero rutrum dapibus eget eget velit. Sed sollicitudin elit nec leo lobortis venenatis. Proin a lectus magna. Nam blandit nulla sem, porttitor accumsan lacus porta in. Pellentesque scelerisque ut leo eget condimentum. Nulla congue orci quis aliquet lacinia. Suspendisse luctus est vel dui egestas, eget aliquet lectus mollis.</p>'
+            xtype: 'image',
+            src: imagesPath + '6.jpg',
+            id: 'timestamp-24'
+        },{
+            xtype: 'image',
+            src: imagesPath + '7.jpg',
+            id: 'timestamp-31'
+        },{
+            xtype: 'image',
+            src: imagesPath + '8.jpg',
+            id: 'timestamp-35'
+        },{
+            xtype: 'image',
+            src: imagesPath + '9.jpg',
+            id: 'timestamp-41'
+        },{
+            xtype: 'image',
+            src: imagesPath + '10.jpg',
+            id: 'timestamp-44'
         }
     ];
 
 
-    var Carousel = new Ext.carousel.Carousel({
+    /* Audio */
+    var currentSlide = 0;
+    var track = [0, 8, 13, 16, 21, 24, 31, 35, 41, 44];
+    var audio = new Ext.Audio({
+        id: 'audio-player',
+        url: 'audio/us-shutdown.m4a',
+        listeners: {
+            play: function(e) {
+                currentSlide += 1;
+                Ext.getCmp('newsbeat-cards').animateActiveItem(currentSlide, {type: 'cover'});
+            },
+
+            timeupdate: function(e, time) {
+                if (e.isPlaying() && parseInt(time) >= track[0]) {
+                    currentSlide += 1;
+                    var showSlide = track.shift();
+                    //console.log(e, track);
+                    var cardToShow = Ext.getCmp('timestamp-' + parseInt(time));
+                    if (cardToShow) {
+                        Ext.getCmp('newsbeat-cards').animateActiveItem(cardToShow, {type: 'cover'});
+                    }
+
+                }
+            }
+        }
+    });
+
+
+    //Ext.getCmp('newsbeat-cards').animateActiveItem(3, {type: 'cover'})
+
+    /*var Carousel = new Ext.carousel.Carousel({
         ui: 'light',
         direction: 'horizontal',
         directionLock: true,
         items: items
+    });*/
+    Carousel = new Ext.Panel({
+        id: 'newsbeat-cards',
+        layout: 'card',
+        items: items,
+        listeners: {
+            tap: function() {
+                console.log('stop');
+                //audio.pause();
+                //Ext.getCmp('newsbeat-cards').animateActiveItem(1, {type: 'cover'})
+            }
+        }
     });
 
 

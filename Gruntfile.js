@@ -264,6 +264,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         //'images/{,*/}*.{webp,gif,jpg,png}',
                         'images/**/*.{webp,gif,jpg,png}',
+                        'audio/**/*.*',
                         'styles/fonts/{,*/}*.*',
                         'styles/*.css',
                         'bower_components/sass-bootstrap/fonts/*.*'
