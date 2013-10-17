@@ -259,10 +259,10 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
-                        '*.html',
+                        '{,*/}*.{html,js}',
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
+                        'images/{,*/}*.{webp,gif,jpg,png}',
                         'styles/fonts/{,*/}*.*',
                         'styles/*.css',
                         'bower_components/sass-bootstrap/fonts/*.*'
@@ -380,7 +380,7 @@ module.exports = function (grunt) {
         //'modernizr',
         'copy:dist',
         'replace:dist',
-        'rev',
+        //'rev',
         'usemin'
     ]);
 
