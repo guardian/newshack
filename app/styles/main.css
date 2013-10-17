@@ -1,0 +1,69 @@
+* {
+    -webkit-box-sizing: border-box;
+    boz-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* Start menu */
+.start-menu {
+    font-family: Merriweather, serif;
+}
+.start-menu .thumb {
+    width: 50px;
+    float: left;
+    margin-right: 8px;
+}
+
+
+
+/* Card styles */
+.card .x-innerhtml {
+    padding: 8px 32px 8px 8px;
+}
+
+.card {
+    color: #333;
+    font-family: Merriweather, serif;
+}
+
+.card h1 {
+    border-top: 4px solid #4bc6df;
+    color: #005689;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 2px 0;
+}
+
+
+/* Grid image */
+.grid-container {
+    background-color: #000;
+}
+
+.grid__item {
+    float: left;
+    width: 33.33%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.grid__img {
+    width: 100%;
+}
+
+
+/* Image cards */
+.x-img-background {
+    background: #000;
+}
+
+/* Carousel colour */
+.x-carousel-indicator > * {
+    background-color: #214583 !important;
+    opacity: 0.4;
+}
+.x-carousel-indicator > .x-carousel-indicator-active { opacity: 1 }

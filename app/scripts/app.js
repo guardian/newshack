@@ -28,126 +28,13 @@ define([], function () {
          * launch.
          */
         launch: function() {
-            //first we define each of the categories we have for each one of the horixontal carousels
-            //these images can be found inside resources/photos/{category_name}/*
-            var categories = ['Food', 'Animals', 'Cars'],
-                itemsCountPerCategory = 3,
-                horizontalCarousels = [],
-                items, i, j, ln, category;
 
-            //now we loop through each of the categories
-            for (i = 0,ln = categories.length; i < ln; i++) {
-                items = [];
-                category = categories[i];
+            require(['startmenu', 'carousel'], function(StartMenu, Carousel) {
 
-                for (j = 1; j <= itemsCountPerCategory; j++) {
-                    //and push each of the image as an item into the items array
-                    //you can see we are using the img xtype which is an image component,
-                    //and we just give is a custom cls to style it, and the src
-                    //of the image
-                    items.push({
-                        /*xtype: 'image',
-                        cls: 'my-carousel-item-img',
-                        //src: 'resources/photos/' + category + '/' + j + '.jpg'
-                        html: 'Content here',
-                        style: {
-                            color: '#fff'
-                        }*/
-                        xtype: 'carousel',
-                        direction: 'vertical',
-                        directionLock: true,
-                        indicator: true,
-                        items: [{
-                            xtype: 'panel',
-                            //fullscreen: true,
-                            layout: 'vbox',
-                            items: [{
-                                xtype: 'panel',
-                                cls: 'panel',
-                                height: '100%',
-                                style: {
-                                    background: '#fff'
-                                },
-                                html: '<h1>Summary</h1>' +
-                                      '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non aliquam lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque venenatis neque nunc, ut porttitor felis mollis a. Nulla at purus ut libero rutrum dapibus eget eget velit. Sed sollicitudin elit nec leo lobortis venenatis. Proin a lectus magna. Nam blandit nulla sem, porttitor accumsan lacus porta in. Pellentesque scelerisque ut leo eget condimentum. Nulla congue orci quis aliquet lacinia. Suspendisse luctus est vel dui egestas, eget aliquet lectus mollis.</p>'
-                            },{
-                                xtype: 'image',
-                                src: 'img/photos/' + category + '/1.jpg'
-                            },{
-                                xtype: 'panel',
-                                docked: 'bottom',
-                                //flex: 2,
-                                //html: 'Left Panel, 1/3rd of total sizexxx',
-                                style: 'background-color: #5E99CC; color: #fff;',
-                                //top: 0,
-                                padding: 0,
-                                margin: 0,
-                                border: 0,
-                                width: '100%'
-                            }/*,{
-                                xtype: 'map',
-                                useCurrentLocation: true,
-                                width: 200,
-                                height: 200,
-                                centered: true
-                            }*/]
-                        },{
-                            xtype: 'image',
-                            src: 'img/photos/' + category + '/2.jpg'
-                        },{
-                            xtype: 'image',
-                            src: 'img/photos/' + category + '/3.jpg'
-                        }]
-                    });
-                }
+                Ext.Viewport.add(StartMenu);
+                Ext.Viewport.add(Carousel);
 
-                //now we add the new horizontal carousel for this category
-                //horizontalCarousels.push({
-            }
-
-                /*setInterval(function() {
-                    //hCarousel.next();
-                }, 5000);*/
-                var hCarousel = new Ext.carousel.Carousel({
-                    ui: 'light',
-                    direction: 'horizontal',
-                    directionLock: true,
-                    items: items
-                });
-
-                /*audio = new Ext.Audio({
-                    url: 'http://download.guardian.co.uk/audio/kip/media/series/mediatalk/1381422536899/4922/gdn.media.131010.leveson.sb.mp3',
-                    listeners: {
-                        timeupdate: function(e, time) {
-                            //console.log(time);
-                        }
-                    }
-                }).play();*/
-
-
-             Ext.data.JsonP.request({
-               url: 'http://content.guardianapis.com/search?q=gallery&tag=type%2Fgallery&show-media=all&page-size=1&api-key=xufdus8ntynnw7un95xqy5bq',
-               disableCaching: false,
-               success: function(response, opts) {
-                  //var obj = Ext.decode(response.responseText);
-                  //console.dir(response);
-                  var carouselItems = [];
-                  response.response.results[0].mediaAssets.forEach(function(item) {
-                    //console.log(item.file);
-                    carouselItems.push({ xtype: 'image', src: item.file });
-                  });
-
-                  console.log(carouselItems);
-                  hCarousel.innerItems[0].setItems(carouselItems);
-               },
-               failure: function(response, opts) {
-                  console.log('server-side failure with status code ' + response.status);
-               }
             });
-
-
-
-            Ext.Viewport.add(hCarousel);
         }
     });
 });

@@ -259,6 +259,7 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
+                        '*.html',
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
@@ -352,7 +353,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
-            'concurrent:server',
+            //'concurrent:server',
             'autoprefixer',
             'connect:livereload',
             'watch'
@@ -361,7 +362,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', [
         'clean:server',
-        'concurrent:test',
+        //'concurrent:test',
         'autoprefixer',
         'connect:test',
         'mocha'
@@ -370,7 +371,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
-        'concurrent:dist',
+        //'concurrent:dist',
         'autoprefixer',
         'requirejs',
         'concat',
