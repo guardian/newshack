@@ -1,4 +1,4 @@
-define(['grid-view'], function(GridView) {
+define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
 
     var imagesPath = 'images/stories/us-shutdown/';
 
@@ -84,7 +84,8 @@ define(['grid-view'], function(GridView) {
         directionLock: true,
         items: items
     });*/
-    Carousel = new Ext.Panel({
+
+    NewsbeatCards = new Ext.Panel({
         id: 'newsbeat-cards',
         layout: 'card',
         items: items,
@@ -97,6 +98,59 @@ define(['grid-view'], function(GridView) {
         }
     });
 
+
+
+
+        var HTMLPanel = Ext.create('HTMLPanel', {
+            // this is now `scrollable`, not `scroll`
+            //scroll: 'vertical',
+            scrollable: 'vertical',
+
+            url: 'latest.html'
+        });
+
+
+    NewsNightCards = new Ext.Panel({
+        id: 'newsnight-cards',
+        layout: 'card',
+        items: [
+            GuToolbar,
+            Ext.create('HTMLPanel', {
+                // this is now `scrollable`, not `scroll`
+                //scroll: 'vertical',
+                scrollable: 'vertical',
+                url: 'latest.html'
+            })
+        ],
+        listeners: {
+            activate: function(self) {
+                console.log('on newsnight', self);
+                Carousel.lock();
+                //Ext.getCmp('nbnn-container').setScrollable(false);
+
+                currentSlide = 0;
+                audio.setCurrentTime(0);
+                audio.pause();
+                Ext.getCmp('newsbeat-cards').setActiveItem(0);
+
+                //Ext.Viewport.add(self);
+                //Ext.Viewport.setActiveItem(1);
+            }
+        }
+    });
+
+
+    var Carousel = new Ext.LockableCarousel({
+        ui: 'light',
+        direction: 'vertical',
+        directionLock: true,
+        indicator: false,
+        id: 'nbnn-container',
+        items: [
+            NewsbeatCards,
+            NewsNightCards
+        ]
+    });
 
     return Carousel;
 });

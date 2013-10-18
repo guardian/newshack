@@ -22,6 +22,7 @@ define([], function () {
             144: 'images/icons/144x144.png'
         },
 
+        requires: ['HTMLPanel'],
 
         /**
          * The launch method is called when the browser is ready and the application is ready to
@@ -37,4 +38,22 @@ define([], function () {
             });
         }
     });
+
+
+    Ext.define('Ext.LockableCarousel', {
+        extend: 'Ext.Carousel',
+        id: 'WelcomeCarousel',
+        initialize: function () {
+           this.onDragOrig = this.onDrag;
+           this.onDrag = function (e) { if(!this.locked){this.onDragOrig(e);} }
+        },
+        locked: false,
+        lock: function () { this.locked = true; },
+        unlock: function () { this.locked = false; }
+    });
+
+
+
 });
+
+
