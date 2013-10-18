@@ -7,11 +7,13 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
         {
             xtype: 'image',
             src: imagesPath + '1.jpg',
-            id: 'timestamp-0'
+            id: 'timestamp-0',
+            title: 'Latest Update'
         },{
             xtype: 'image',
             src: imagesPath + '2.jpg',
-            id: 'timestamp-8'
+            id: 'timestamp-8',
+            title: 'People'
         },{
             xtype: 'image',
             src: imagesPath + '3.jpg',
@@ -135,6 +137,7 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
 
                 //Ext.Viewport.add(self);
                 //Ext.Viewport.setActiveItem(1);
+                startModules();
             }
         }
     });
