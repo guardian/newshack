@@ -5,6 +5,22 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
     var items = [
         GridView,
         {
+            docked: 'top',
+            xtype: 'label',
+            cls: 'image-type',
+            id: 'image-type',
+            html: '',
+            hidden: true
+        },
+        {
+            docked: 'bottom',
+            xtype: 'label',
+            cls: 'image-detail',
+            id: 'image-detail',
+            html: 'View details <span class="arrow">▼</span>',
+            hidden: true
+        },
+        {
             xtype: 'image',
             src: imagesPath + '1.jpg',
             id: 'timestamp-0',
@@ -77,6 +93,8 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
                     //console.log(e, track);
                     var cardToShow = Ext.getCmp('timestamp-' + parseInt(time));
                     if (cardToShow) {
+                        Ext.getCmp('image-type').setHtml(cardToShow.config.title).show();
+                        Ext.getCmp('image-detail').show();
                         Ext.getCmp('newsbeat-cards').animateActiveItem(cardToShow, {type: 'cover', direction: 'down'});
                     }
 

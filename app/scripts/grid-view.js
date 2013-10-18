@@ -4,7 +4,7 @@ define(['gu-toolbar'], function(GuToolbar) {
         gridHtml = '<ul class="grid">';
 
     // Build image grid
-    for (var i=1; i<=10; i++) {
+    for (var i=1; i<=12; i++) {
         var imgSrc = imagesPath + i + '.jpg';
         gridHtml += '<li class="grid__item"><img class="grid__img" src="'+imgSrc+'"></li>';
     }
