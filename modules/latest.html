@@ -1,23 +1,95 @@
 <style>
-    .rep { color: red; }
-    .dem { color: blue; }
+
+    /** font-face */
     @font-face {
         font-family: EgyptianHeadline-Light;
         src: url('EgyptianHeadline-Light.woff');
     }
+<<<<<<< HEAD
+    
+    @font-face {
+        font-family: EgyptianText-Regular;
+        src: url('EgyptianText-Regular.woff');
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: EgyptianText-Regular, serif;
+        font-size: 14px;
+    }
+
+    h3, p { margin: 10px 10px ; line-height: 1.5em; }
+    .rep { color: #E91D0E; }
+    .dem { color: #232066; }
+
+=======
+>>>>>>> 995e5950043a4290f9b6fcbb00e939481258b6dd
 
     h2 {
         background-color: #005689;
         color: white;
-        padding: 10px 10px 10px 5px;
+        padding: 10px 10px 10px 10px;
         border-top: 2px solid #4bc6df;
         font-family: EgyptianHeadline-Light, serif;
         font-size: 18px;
     }
+    
+    h3 {
+        font-family: EgyptianHeadline-Light, serif;
+        margin-top: 1em;
+    }
     img {
         width: 100%;
     }
-    .rep, .dem { font-size: 13px; }
+    .rep, .dem { font-size: 12px; }
+
+    /** button */
+    p.button:hover {
+        background-color: black;
+    }
+
+    p.button {
+        background-color: #4bc6df;
+        font-size: 16px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 4px;
+        color: white;
+    }
+
+    /** related */
+    .module-related {
+        margin-top: 30px;
+        margin-bottom: 250px;
+    }
+        
+    .module-related .two,
+    .module-related .one {
+        display: block;
+        color: white;
+        background-color: #999;
+        width: 25%;
+        min-height: 130px;
+        padding: 10px 5px 5px 5px;
+        text-shadow: 1px 1px #000;
+    }
+    
+    .module-related .two:hover,
+    .module-related .one:hover {
+        background-color: #333;
+        cursor: hand;
+        opacity: 0.8;
+    }
+    
+    .module-related .two {
+        float: right;
+        text-align: right;
+    }
+
+    .module-related .one {
+        float: left;
+    }
 </style>
 <section class="module-latest">
     <h2>Latest update</h2>
@@ -34,19 +106,29 @@
     <h2>Background</h2>
     <p>
     The great US government shutdown of 2013 began, said the Iowa senator Tom Harkin, "like a scene from the Hollywood western High Noon". There was the
-    Democrat sheriff Barack Obama, squared off against a gang of southern gunslingers, both sides determined not to give an inch and prepared to blow each
-    other's brains out to get what they came for.
     </p>
     <p>
-        <a href="#">Continue reading</a>
+    Democrat sheriff Barack Obama, squared off against a gang of southern gunslingers, both sides determined not to give an inch and prepared to blow each
+    other's brains out to get what they came for.  <a href="#">...</a>
+    </p>
+</section>
+<section class="module-background">
+    <h2>What happens next?</h2>
+    <p>
+        ...
     </p>
 </section>
 <section class="module-analysis">
     <h2>Analysis</h2>
-    <blockquote>
+    <p>
     "The real story is not revealed by people's view of the politicians; it's contained in the indices of economic sentiment. Gallup finds that Americans'
+<<<<<<< HEAD
+    confidence in the economy has dropped like a rock, from -20pt just before the shutdown, to -35pt now." 
+    </p>
+=======
     confidence in the economy has dropped like a rock, from -20pt just before the shutdown, to -35pt now."
     </blockquote>
+>>>>>>> 995e5950043a4290f9b6fcbb00e939481258b6dd
 </section>
 
 <section class="module-comment">
@@ -63,7 +145,7 @@
         <a href="https://twitter.com/intent/tweet?text=...&url=...">tweet this!</a>
     </p>
     <p>
-        Emma Brockes: "<a href="http://www.theguardian.com/commentisfree/emma-brockes-blog/2013/oct/09/boehner-congress-women-julius-caesar">It’'s useful to be reminded of
+        Emma Brockes: "<a href="http://www.theguardian.com/commentisfree/emma-brockes-blog/2013/oct/09/boehner-congress-women-julius-caesar">It's useful to be reminded of
         what political behaviour in extremis looks like.</a>"
         <a href="https://twitter.com/intent/tweet?text=...&url=...">tweet this!</a>
     </p>
@@ -122,10 +204,18 @@
 <section class="module-witness">
     <h2>Witness</h2>
     <p>
-        How the shutdown is affecting real people? Send us your photos and videos.
+        How the shutdown is affecting real people?
+    </p>
+<<<<<<< HEAD
+    <p>
+        <img src="witness.png"/>
     </p>
 
+    <h3>Furloughed employees</h3>   
+=======
+
     <h3>Furloughed employees</h3>
+>>>>>>> 995e5950043a4290f9b6fcbb00e939481258b6dd
     <img src="http://i.guim.co.uk/a/sys-images/Guardian/Pix/pictures/2013/10/9/1381324690584/50dd8d2b-98be-48a2-bb82-e81d6cb50a4d-2060x1236.jpeg"/>
     <p>
         Marc Blackburn has been a park ranger with the National Park Service for nineteen years and currently works at Nez Perce National Historical Park in Idaho. Due to the ongoing government shutdown, Marc hasn't been working for over a week. He will not be paid until the government reopens.
@@ -142,19 +232,25 @@
 <section>
     <h2>Popular</h2>
     <ul>
-        <li>US shutdown: a guide for non-Americans</li>
-        <li>What services are affected when the US government shuts down</li>
-        <li>Q: who's to blame for government shutdown? A: the Republican party</li>
+        <li>Guardian. US shutdown: a guide for non-Americans</li>
+        <li>Guardian. What services are affected when the US government shuts down</li>
+        <li>Guardian. Who's to blame for government shutdown? A: the Republican party</li>
+        <li>BBC. 'Obamacare' health law Q&A
+        <li>BBC. How bad are US debt levels?
+        <li>BBC. What's the economic impact of a US government shutdown?
     </ul>
-   Q&A: 'Obamacare' health law
-http://www.bbc.co.uk/news/world-us-canada-24370967
+<!-- http://www.bbc.co.uk/news/world-us-canada-24370967 -->
 
-How bad are US debt levels?
-http://www.bbc.co.uk/news/business-24541140
+<!-- http://www.bbc.co.uk/news/business-24541140 -->
 
+<<<<<<< HEAD
+<!-- http://www.bbc.co.uk/news/business-24341406  -->
+    <!-- 
+=======
 What's the economic impact of a US government shutdown?
 http://www.bbc.co.uk/news/business-24341406
     <!--
+>>>>>>> 995e5950043a4290f9b6fcbb00e939481258b6dd
         http://www.theguardian.com/world/2013/sep/30/us-shutdown-explainer-non-americans
         What services are affected when the US government shuts down - 6000 shares
         http://www.theguardian.com/world/2013/sep/29/us-government-shutdown-services-affected
@@ -162,7 +258,6 @@ http://www.bbc.co.uk/news/business-24341406
         http://www.theguardian.com/commentisfree/2013/sep/30/government-shutdown-blame-republican-party
     -->
 
-    </ul>
 </section>
 <section class="module-missing">
 
@@ -175,3 +270,13 @@ http://www.bbc.co.uk/news/business-24341406
     <p><input name="f" type="radio"> The financial implications of the shutdown.</p>
 
 </section>
+<section class="module-related">
+<p>
+    More stories...
+</p>
+<span class="one">The fiscal cliff</span>
+<span class="two">Eurozone crisis</span>
+</section>
+
+
+

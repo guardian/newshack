@@ -25,35 +25,43 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
         },{
             xtype: 'image',
             src: imagesPath + '3.jpg',
-            id: 'timestamp-13'
+            id: 'timestamp-13',
+            title: 'People',
         },{
             xtype: 'image',
             src: imagesPath + '4.jpg',
-            id: 'timestamp-16'
+            id: 'timestamp-16',
+            title: 'Person'
         },{
             xtype: 'image',
             src: imagesPath + '5.jpg',
-            id: 'timestamp-21'
+            id: 'timestamp-21',
+            title: 'Background'
         },{
             xtype: 'image',
             src: imagesPath + '6.jpg',
-            id: 'timestamp-24'
+            id: 'timestamp-24',
+            title: 'Background'
         },{
             xtype: 'image',
             src: imagesPath + '7.jpg',
-            id: 'timestamp-31'
+            id: 'timestamp-31',
+            title: 'Background'
         },{
             xtype: 'image',
             src: imagesPath + '8.jpg',
-            id: 'timestamp-35'
+            id: 'timestamp-35',
+            title: 'Comment'
         },{
             xtype: 'image',
             src: imagesPath + '9.jpg',
-            id: 'timestamp-41'
+            id: 'timestamp-41',
+            title: 'Comment'
         },{
             xtype: 'image',
             src: imagesPath + '10.jpg',
-            id: 'timestamp-44'
+            id: 'timestamp-44',
+            title: 'Analysis'
         }
     ];
 
