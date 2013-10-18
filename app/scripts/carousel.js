@@ -5,14 +5,6 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
     var items = [
         GridView,
         {
-            docked: 'top',
-            xtype: 'label',
-            cls: 'image-type',
-            id: 'image-type',
-            html: '',
-            hidden: true
-        },
-        {
             xtype: 'image',
             src: imagesPath + '1.jpg',
             id: 'timestamp-0',
@@ -31,7 +23,7 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
             xtype: 'image',
             src: imagesPath + '4.jpg',
             id: 'timestamp-16',
-            title: 'Person'
+            title: 'Background'
         },{
             xtype: 'image',
             src: imagesPath + '5.jpg',
@@ -46,7 +38,7 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
             xtype: 'image',
             src: imagesPath + '7.jpg',
             id: 'timestamp-31',
-            title: 'Background'
+            title: 'Comment'
         },{
             xtype: 'image',
             src: imagesPath + '8.jpg',
@@ -56,12 +48,12 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
             xtype: 'image',
             src: imagesPath + '9.jpg',
             id: 'timestamp-41',
-            title: 'Comment'
+            title: 'Analysis'
         },{
             xtype: 'image',
             src: imagesPath + '10.jpg',
             id: 'timestamp-44',
-            title: 'Analysis'
+            title: 'User Contributions'
         }
     ];
 
@@ -85,8 +77,6 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
                     //console.log(e, track);
                     var cardToShow = Ext.getCmp('timestamp-' + parseInt(time));
                     if (cardToShow) {
-                        //console.log(cardToShow);
-                        Ext.getCmp('image-type').setHtml(cardToShow.config.title).show();
                         Ext.getCmp('newsbeat-cards').animateActiveItem(cardToShow, {type: 'cover', direction: 'down'});
                     }
 
