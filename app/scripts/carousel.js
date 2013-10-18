@@ -67,7 +67,7 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
                     //console.log(e, track);
                     var cardToShow = Ext.getCmp('timestamp-' + parseInt(time));
                     if (cardToShow) {
-                        Ext.getCmp('newsbeat-cards').animateActiveItem(cardToShow, {type: 'cover'});
+                        Ext.getCmp('newsbeat-cards').animateActiveItem(cardToShow, {type: 'cover', direction: 'down'});
                     }
 
                 }
