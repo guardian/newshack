@@ -5,19 +5,55 @@
     margin: 0;
 }
 
+@font-face{
+    font-family: 'WebEgyptian';
+    src: url('EgyptianHeadline-Light.woff') format('woff');
+}
 
+
+.guardian-logo {
+    width: 100px;
+    margin: 15px 5px;
+}
+
+.x-inner {
+    font-family: WebEgyptian, serif;
+}
+
+.x-inner p {
+    margin: 0 0 12px 0;
+}
 
 
 /* Start menu */
 .start-menu {
-    font-family: Merriweather, serif;
+    font-family: WebEgyptian, serif;
 }
 .start-menu .thumb {
     width: 50px;
     float: left;
     margin-right: 8px;
+    margin-bottom: 20px;
 }
 
+.toolbar {
+    background-image: none;
+}
+
+
+/* Logo button */
+.gu-logo-button {
+    /*background: transparent url(../images/guardian-logo.png) no-repeat 0 0 !important;
+    background-size: 140px 25px;*/
+    border: 0 !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    margin: 0; !important;
+    padding: 0 !important;
+}
+.gu-logo-button .guardian-logo {
+    margin-top: 10px;
+}
 
 
 /* Card styles */
@@ -27,7 +63,7 @@
 
 .card {
     color: #333;
-    font-family: Merriweather, serif;
+    font-family: WebEgyptian, serif;
 }
 
 .card h1 {
@@ -47,7 +83,7 @@
 .grid__item {
     float: left;
     width: 33.33%;
-    height: 200px;
+    height: 160px;
     overflow: hidden;
 }
 
@@ -56,9 +92,36 @@
 }
 
 
+.story-title {
+    padding: 0;
+    font-family: WebEgyptian,
+    font-size: 30px;
+    text-align: center;
+    background: rgba(255,255,255,0.8);
+    padding: 10px 0;
+}
+
+.story-title h1 {
+    font-size: 30px;
+    color: #214583;
+}
+
+
+
+
 /* Image cards */
 .x-img-background {
     background: #000;
+}
+
+/* Play button */
+.play-button,
+.play-button.x-button-pressing {
+    background: rgba(255,255,255,0.95) url(../images/blue-arrow.svg) no-repeat 50% 50%;
+    background-size: 60px;
+}
+.play-button.x-button-pressing {
+    background-color: rgba(200,200,200,0.95);
 }
 
 /* Carousel colour */
@@ -67,3 +130,7 @@
     opacity: 0.4;
 }
 .x-carousel-indicator > .x-carousel-indicator-active { opacity: 1 }
+
+.x-list .x-list-item.x-list-item-tpl .x-innerhtml {
+    min-height: 60px;
+}
