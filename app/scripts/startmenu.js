@@ -2,7 +2,7 @@ define(['config'], function(Config) {
 
     var storyStore = Ext.create('Ext.data.Store', {
             storeId: 'TopStories',
-            fields: ['name', 'thumb', 'id']
+            fields: ['name', 'thumb', 'id', 'sublink']
         });
 
 
@@ -24,7 +24,7 @@ define(['config'], function(Config) {
                 title: 'Blog',
                 emptyText: 'No Data Loaded',
                 store: 'TopStories',
-                itemTpl: '<img src="{thumb}" class="thumb"> {name}',
+                itemTpl: '<img src="{thumb}" class="thumb"> {name} <span class="sublink">{sublink}</span>',
                 listeners: {
                     select: function(list, selected) {
                         var selectedId = selected.data.id;
@@ -61,7 +61,8 @@ define(['config'], function(Config) {
           storyStore.insert(1, {
             name: 'Barack Obama signs bill to end debt crisis after it passes US congress',
             id: 'us-shutdown',
-            thumb: 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2013/10/1/1380607422308/9159b1ef-9e2d-4d3b-9943-18396dd47f9a-140x84.jpeg'
+            thumb: 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2013/10/1/1380607422308/9159b1ef-9e2d-4d3b-9943-18396dd47f9a-140x84.jpeg',
+            sublink: 'Story: US debt crisis'
           });
 
        },

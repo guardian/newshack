@@ -19,7 +19,7 @@ define(['gu-toolbar'], function(GuToolbar) {
             //GuToolbar,
             {
                 xtype: 'label',
-                html: '<h1>Barack Obama signs bill to end debt crisis after it passes US congress</h1>',
+                html: '<h1>Story: US debt crisis</h1>',
                 centered: true,
                 top: 50,
                 width: '100%',

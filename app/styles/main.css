@@ -24,6 +24,12 @@
     margin: 0 0 12px 0;
 }
 
+.sublink {
+    font-size: 15px;
+    display: block;
+    color: blue;
+}
+
 
 /* Start menu */
 .start-menu {
@@ -107,7 +113,10 @@
 }
 
 
-
+.image-type .x-innerhtml {
+    padding: 8px;
+    font-size: 20px;
+}
 
 /* Image cards */
 .x-img-background {
