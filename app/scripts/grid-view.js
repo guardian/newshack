@@ -16,15 +16,15 @@ define(['gu-toolbar'], function(GuToolbar) {
         cls: 'grid-container',
         html: gridHtml,
         items: [
-            GuToolbar,
-            /*{
-                xtype: 'panel',
-                html: '<h1>US Shutdown</h1>',
-                //centered: true,
+            //GuToolbar,
+            {
+                xtype: 'label',
+                html: '<h1>Barack Obama signs bill to end debt crisis after it passes US congress</h1>',
+                centered: true,
                 top: 50,
-                cls: 'story-title',
-                left: '35%'
-            },*/
+                width: '100%',
+                cls: 'story-title'
+            },
             {
                 xtype: 'button',
                 text: '',

@@ -59,7 +59,7 @@ define(['config'], function(Config) {
           });
 
           storyStore.insert(1, {
-            name: 'US Shutdown',
+            name: 'Barack Obama signs bill to end debt crisis after it passes US congress',
             id: 'us-shutdown',
             thumb: 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2013/10/1/1380607422308/9159b1ef-9e2d-4d3b-9943-18396dd47f9a-140x84.jpeg'
           });
