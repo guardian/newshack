@@ -154,6 +154,7 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
             activate: function(self) {
                 console.log('on newsnight', self);
                 Carousel.lock();
+                Ext.getCmp('newsbeat-cards').remove();
                 //Ext.getCmp('nbnn-container').setScrollable(false);
 
                 currentSlide = 0;

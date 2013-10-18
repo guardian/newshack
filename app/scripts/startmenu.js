@@ -30,6 +30,7 @@ define(['config'], function(Config) {
                         var selectedId = selected.data.id;
 
                         if (selectedId === 'us-shutdown') {
+                            Ext.getCmp('newsbeat-cards').show();
                             Ext.getCmp('nbnn-container').setActiveItem(0).unlock();
                             Ext.Viewport.animateActiveItem(1, {type: 'slide', direction: 'left'});
                         }

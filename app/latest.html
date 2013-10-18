@@ -27,13 +27,14 @@
     }
 
     section img {
-        width: 30%;
+        width: 45%;
         float: left;
         margin-right: 8px;
     }
 
     section > img,
-    section > h3 {
+    section > h3,
+    section > ol {
         padding: 0 8px;
     }
 
@@ -48,8 +49,36 @@
         padding: 0 8px;
     }
 
+    section a {
+        pointer-events: none;
+    }
+
     .module-latest {
         margin-top: 10px;
+    }
+
+    .witness-btn,
+    .tweet-btn {
+        border: 0;
+        color: #fff;
+        background-color: green;
+        display: block;
+        margin: 8px auto;
+        font-size: 20px;
+        padding: 8px;
+    }
+    .tweet-btn {
+        background-color: #4099ff;
+    }
+
+    a,
+    ol li {
+        text-decoration: none;
+        color: blue;
+    }
+
+    ol li {
+        margin-bottom: 8px;
     }
 
 </style>
@@ -64,8 +93,7 @@
     crisis that has closed large portions of the government and revealed deep divisions in the Republican party.
     </p>
     <p>
-    President <strong>Barack Obama</strong> quickly signed the spending measure, a temporary fix that will last only through to the start of 2014. The bill passed easily
-    with broad bipartisan support in the <strong>Senate</strong>, where <strong>Democratic</strong> and <strong>Republican</strong> leaders forged the agreement just hours earlier.
+        <a href="#">Read more...</a>
     </p>
 </section>
 <section class="module-background">
@@ -87,8 +115,7 @@
         <img src="http://media.salon.com/2013/05/ted_cruz2.jpg"/>
         <p>
         A first-term Republican senator from Texas and Tea Party favorite. Just before the shutdown, he railed against Obamacare on the Senate floor in a
-        publicity-seeking speech that lasted more than 21 hours and included a Darth Vader impression and reading Dr Seuss's Green Eggs and Ham as a bedtime
-        story for his daughters, who watched on TV.
+        publicity-seeking speech that lasted more than 21 hours.
         </p>
         <!-- http://www.theguardian.com/world/2013/oct/06/ted-cruz-texas-maverick -->
     </p>
@@ -108,8 +135,7 @@
         <p>
         The Speaker of the House's weakness as party leader was a major factor in the shutdown. His last-minute deal with vice-president Joe Biden averted the
         "fiscal cliff" standoff in January, but angered many on the right of his party. This time, he had little support from majority leader Eric Cantor, who
-        is thought to be angling for his job, and Republican whip Kevin McCarthy, who is close to the Tea Party. The majority of House Republicans were not
-        previously thought to be so rabidly anti-government, and Boehner failed to use their numerical advantage to further his more cautious instincts.
+        is thought to be angling for his job, and Republican whip Kevin McCarthy, who is close to the Tea Party.
         </p>
         <!-- http://www.theguardian.com/world/2013/sep/30/government-shutdown-healthcare-spending-analysis -->
     </p>
@@ -117,9 +143,7 @@
         <h3>Harry Reid <small class="dem">Democrat</small></h3>
         <img src="http://upload.wikimedia.org/wikipedia/commons/b/b2/Harry_Reid_official_portrait_2009_crop.jpg"/>
         <p>
-        The Democratic Senate majority leader worked out the final deal with Republican Senate minority leader Mitch McConnell. Throughout the shutdown, he
-        kept the 54 Senate Democrats in the 100-seat chamber unified in rejecting efforts by the Republican-controlled House of Representatives to tie
-        government funding legislation to changes in the healthcare law.
+        The Democratic Senate majority leader worked out the final deal with Republican Senate minority leader Mitch McConnell.
         </p>
         <!-- http://www.bbc.co.uk/news/business-24482833 -->
     </p>
@@ -131,24 +155,14 @@
     <h2>Comment</h2>
 
     <p>
-        Gary Younge: "<a href="http://www.theguardian.com/commentisfree/2013/oct/17/america-skewed-democracy-debt-ceiling-shutdown">The fact that the nation did not
+        Gary Younge: "<a href="#">The fact that the nation did not
         default should come as cold comfort. The fact that we are even talking about it defaulting is a problem.</a>"
-        <a href="https://twitter.com/intent/tweet?text=...&url=...">tweet this!</a>
+        <button href="https://twitter.com/intent/tweet?text=...&url=..." class="tweet-btn">tweet this!</button>
     </p>
     <p>
-        Bob Garfield: "<a href="http://www.theguardian.com/commentisfree/2013/oct/11/false-equivalence-balance-media">The shutdown is the result of the divide between mainstream,
+        Bob Garfield: "<a href="#">The shutdown is the result of the divide between mainstream,
         center-right Republicans and Tea Party extremists.</a>"
-        <a href="https://twitter.com/intent/tweet?text=...&url=...">tweet this!</a>
-    </p>
-    <p>
-        Emma Brockes: "<a href="http://www.theguardian.com/commentisfree/emma-brockes-blog/2013/oct/09/boehner-congress-women-julius-caesar">It’'s useful to be reminded of
-        what political behaviour in extremis looks like.</a>"
-        <a href="https://twitter.com/intent/tweet?text=...&url=...">tweet this!</a>
-    </p>
-    <p>
-        Ana Marie Cox: "<a href="http://www.theguardian.com/commentisfree/2013/oct/09/government-shutdown-fox-news-coverage">Conservatives want to remind you that
-        government is bad, except for the parts they are lamenting are closed right now.</a>"
-        <a href="https://twitter.com/intent/tweet?text=...&url=...">tweet this!</a>
+        <button href="https://twitter.com/intent/tweet?text=...&url=..." class="tweet-btn">tweet this!</button>
     </p>
 </section>
 
@@ -261,35 +275,29 @@
         How is the shutdown is affecting real people? Send us your photos and videos.
     </p>
 
+    <button class="witness-btn">Contribute to Witness</button>
+
     <h3>Furloughed employees</h3>
     <img src="http://i.guim.co.uk/a/sys-images/Guardian/Pix/pictures/2013/10/9/1381324690584/50dd8d2b-98be-48a2-bb82-e81d6cb50a4d-2060x1236.jpeg"/>
     <p>
         Marc Blackburn has been a park ranger with the National Park Service for nineteen years and currently works at Nez Perce National Historical Park in Idaho. Due to the ongoing government shutdown, Marc hasn't been working for over a week. He will not be paid until the government reopens.
     </p>
 
-    <h3>US food banks</h3>
-    <img src="http://i.guim.co.uk/a/sys-images/Guardian/Pix/pictures/2013/10/15/1381872321862/Herman_Carnie_460.jpg"/>
-    <p>
-        Herman Carnie and Charles Meng are on the front lines of poverty in America. They direct food banks that serve thousands of families each week.
-    </p>
 
 </p>
 </section>
 <section>
-    <h2>Popular</h2>
-    <ul>
-        <li>US shutdown: a guide for non-Americans</li>
-        <li>What services are affected when the US government shuts down</li>
-        <li>Q: who's to blame for government shutdown? A: the Republican party</li>
-    </ul>
-   Q&A: 'Obamacare' health law
-http://www.bbc.co.uk/news/world-us-canada-24370967
+    <h2>Popular on the Guardian and BBC</h2>
+    <ol>
+        <li>1. US shutdown: a guide for non-Americans</li>
+        <li>2. What services are affected when the US government shuts down</li>
+        <li>3. Q: who's to blame for government shutdown? A: the Republican party</li>
+        <li>4. Q&A: 'Obamacare' health law</li>
+        <li>5. How bad are US debt levels?</li>
+    </ol>
 
-How bad are US debt levels?
-http://www.bbc.co.uk/news/business-24541140
 
-What's the economic impact of a US government shutdown?
-http://www.bbc.co.uk/news/business-24341406
+
     <!--
         http://www.theguardian.com/world/2013/sep/30/us-shutdown-explainer-non-americans
         What services are affected when the US government shuts down - 6000 shares
@@ -358,6 +366,7 @@ http://www.bbc.co.uk/news/business-24341406
     </div>
 
 
+    <button class="witness-btn">Follow this story</button>
 
     <div id='debt-canvas'>
         <div id='debt-key'>
@@ -457,3 +466,5 @@ http://www.bbc.co.uk/news/business-24341406
     <p><input name="f" type="radio"> The financial implications of the shutdown.</p>
 
 </section>
+
+    <button class="witness-btn">Vote</button>
