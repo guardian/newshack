@@ -35,7 +35,6 @@ define(['config'], function(Config) {
                             Ext.Viewport.animateActiveItem(Ext.getCmp('nbnn-container'), {type: 'slide', direction: 'left'});
                         } else {
                             var articleViewCmp = Ext.getCmp('article-view');
-                            console.log(selected.data);
                             articleViewCmp.setData(selected.data);
                             Ext.Viewport.animateActiveItem(articleViewCmp, {type: 'slide', direction: 'left'});
                         }

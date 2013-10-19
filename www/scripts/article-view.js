@@ -16,6 +16,12 @@ define(['gu-toolbar'], function(GuToolbar) {
             activate: function(self) {
                 var data = self.getData();
                 Ext.getCmp('article-view-body').setData(data);
+            },
+            hide: function(self) {
+                var articleBody = Ext.getCmp('article-view-body');
+                if (articleBody.scroller) {
+                    articleBody.scroller.setOffset(0,20);
+                }
             }
         }
     });
