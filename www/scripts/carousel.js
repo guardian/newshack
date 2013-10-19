@@ -153,6 +153,7 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
         listeners: {
             activate: function(self) {
                 //Carousel.lock();
+                self.getInnerItems()[0].setHtml(''); // Clear so that startModules() doesn't try to augment the wrong elements
                 Ext.Viewport.setActiveItem(Ext.getCmp('newsnight-cards-2'));
 
                 currentSlide = 0;
@@ -160,7 +161,7 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
                 audio.pause();
                 Ext.getCmp('newsbeat-cards').setActiveItem(0);
 
-                startModules();
+                //startModules();
             }
         }
     });

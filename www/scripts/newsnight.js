@@ -15,7 +15,10 @@ define(['gu-toolbar'], function(GuToolbar) {
         ],
         listeners: {
             activate: function() {
-                startModules();
+                setTimeout(function() {
+                    startModules();
+                }, 1000)
+
             }
         }
 
