@@ -152,10 +152,14 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
         ],
         listeners: {
             activate: function(self) {
+                Ext.Viewport.setActiveItem(Ext.getCmp('newsnight-cards-2'));
                 console.log('on newsnight', self);
-                Carousel.lock();
-                Ext.getCmp('newsbeat-cards').remove();
+                //Carousel.lock();
+                //Ext.getCmp('newsbeat-cards').remove();
+                //Carousel.remove(Ext.getCmp('newsbeat-cards'));
+                //Carousel.setActiveItem(0);
                 //Ext.getCmp('nbnn-container').setScrollable(false);
+
 
                 currentSlide = 0;
                 audio.setCurrentTime(0);
@@ -163,8 +167,6 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
                 Ext.getCmp('newsbeat-cards').setActiveItem(0);
 
                 //Ext.Viewport.add(self);
-                //Ext.Viewport.setActiveItem(1);
-                startModules();
             }
         }
     });
