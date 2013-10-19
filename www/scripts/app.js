@@ -30,10 +30,12 @@ define([], function () {
          */
         launch: function() {
 
-            require(['startmenu', 'carousel', 'newsnight'], function(StartMenu, Carousel, Newsnight) {
+            require(['startmenu', 'carousel', 'newsnight', 'article-view'], function(StartMenu, Carousel, Newsnight, ArticleView) {
 
                 Ext.Viewport.add(StartMenu);
                 Ext.Viewport.add(Carousel);
+                Ext.Viewport.add(ArticleView);
+
                 Ext.Viewport.add(Newsnight);
 
             });

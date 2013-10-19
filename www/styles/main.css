@@ -24,6 +24,9 @@ body {
     src: url('EgyptianHeadline-Light.woff') format('woff');
 }
 
+a {
+    color: #005689;
+}
 
 .guardian-logo {
     width: 100px;
@@ -142,6 +145,16 @@ body {
 .arrow {
     font-size: 14px;
     margin-left: 8px;
+}
+
+.article {
+    padding: 8px;
+    line-height: 1.1;
+}
+
+.article video,
+.article img {
+    width: 100%;
 }
 
 
