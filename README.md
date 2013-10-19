@@ -5,13 +5,11 @@ output of the 2013 newshack day
 
 
 ### First time setup
-```
-    npm install
-    bower install
-```
+
 
 ### Server
-```grunt server```
+NB: Not needed if you've already got one
+```npm install && grunt server```
 
 ### Deploy
-```grunt deploy```
+```appcfg.py update```
