@@ -152,12 +152,15 @@ define(['grid-view', 'gu-toolbar'], function(GridView, GuToolbar) {
         ],
         listeners: {
             activate: function(self) {
-                Carousel.lock();
+                //Carousel.lock();
+                Ext.Viewport.setActiveItem(Ext.getCmp('newsnight-cards-2'));
 
                 currentSlide = 0;
                 audio.setCurrentTime(0);
                 audio.pause();
                 Ext.getCmp('newsbeat-cards').setActiveItem(0);
+
+                startModules();
             }
         }
     });

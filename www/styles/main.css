@@ -155,6 +155,8 @@ body {
 .play-button.x-button-pressing {
     background: rgba(255,255,255,0.95) url(../images/blue-arrow.svg) no-repeat 50% 50%;
     background-size: 60px;
+    border-radius: 0;
+    border: 2px solid #214583;
 }
 .play-button.x-button-pressing {
     background-color: rgba(200,200,200,0.95);
